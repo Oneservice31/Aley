@@ -199,18 +199,25 @@
     </div>
 
     <script>
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+        const users = [
+        { username: "punhanrzazade5@gmail.com", password: "1220" },
+        { username: "mehemmedjavziyev@gmail.com", password: "Mehemmed12" },
+        { username: "Tunar", password: "Rustamli!!!!" }
+    ];
 
-            // Burada öz istifadəçi adı və şifrənizi daxil edin
-            if (username === "user" && password === "pass") { // Düzgün giriş
-                document.getElementById('loginSection').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-            } else {
-                document.getElementById('loginMessage').style.display = 'block'; // Yanlış giriş
-            }
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const user = users.find(u => u.username === username && u.password === password);
+        
+        if (user) { // Düzgün giriş
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        } else {
+            document.getElementById('loginMessage').style.display = 'block'; // Yanlış giriş
         }
+    }
 
         function axtaris(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -295,3 +302,5 @@
     </script>
 </body>
 </html>
+
+
