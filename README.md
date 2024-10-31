@@ -1,1 +1,0 @@
-Hello. We are 2 12-year-old Azerbaijani children. We have found this site as an alternative to publish programs edited with Python and online programs edited with js. We try to do everything for free.
